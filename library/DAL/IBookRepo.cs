@@ -8,7 +8,7 @@ namespace Library.DAL
     {
         Book Add(Book book);
 
-        Book Update(int id, Book book);
+        Book Update(Book book);
 
         List<Book> GetAll();
 

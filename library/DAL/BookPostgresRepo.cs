@@ -4,20 +4,19 @@ using Library.Entities;
 
 namespace Library.DAL
 {
-    public class BookTextRepo : IBookRepo
+    public class BookPostgresRepo : IBookRepo
     {
-
         public Book Add(Book book)
         {
             throw new NotImplementedException();
         }
-
+        
         public List<Book> GetAll()
         {
             throw new NotImplementedException();
         }
-        
-        public Book Update(int id, Book book)
+
+        public Book Update(Book book)
         {
             throw new NotImplementedException();
         }

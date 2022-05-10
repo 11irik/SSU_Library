@@ -29,9 +29,10 @@ namespace Library.BLL
         public Book Update(int id, string name, int pageCount)
         {
             Book bookTemplate = new Book();
+            bookTemplate.Id = id;
             bookTemplate.Name = name;
             bookTemplate.PageCount = pageCount;
-            return _bookRepo.Update(id, bookTemplate);
+            return _bookRepo.Update(bookTemplate);
         }
 
         public bool Delete(int id)

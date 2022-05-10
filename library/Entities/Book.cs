@@ -23,5 +23,17 @@ namespace Library.Entities
         {
             return Id + " " + Name + " " + PageCount;
         }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Book book &&
+                   Id == book.Id &&
+                   Name == book.Name &&
+                   PageCount == book.PageCount &&
+                   PublisherName == book.PublisherName &&
+                   PublishDate == book.PublishDate &&
+                   WrittenDate == book.WrittenDate &&
+                   EqualityComparer<Author>.Default.Equals(Author, book.Author);
+        }
     }
 }
